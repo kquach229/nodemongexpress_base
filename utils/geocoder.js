@@ -1,5 +1,7 @@
+// Require the geocoder package
 const nodeGeocoder = require("node-geocoder");
 
+// Set the options
 const options = {
     provider: process.env.GEOCODER_PROVIDER,
     httpAdapter: 'https',
@@ -7,7 +9,8 @@ const options = {
     formatter: null
 }
 
-
+// Create a const that holds the geocoding functionalities
 const geocoder = nodeGeocoder(options);
 
+// Export the geocoder
 module.exports = geocoder;

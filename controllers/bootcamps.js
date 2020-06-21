@@ -1,6 +1,13 @@
+// Require the bootcamp model
 const Bootcamp = require("../models/Bootcamp");
+
+// Require the error response
 const ErrorResponse = require("../utils/errorResponse");
+
+// Require the async handler to implement async calls
 const asyncHandler = require("../middleware/async");
+
+// Require the geocoder
 const geocoder = require("../utils/geocoder");
 
 //@desc   Get all bootcamps

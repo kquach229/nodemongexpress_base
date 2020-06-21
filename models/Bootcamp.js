@@ -1,7 +1,13 @@
+// Require the mongoose library
 const mongoose = require("mongoose");
+
+// Requiret the slugify package
 const slugify = require("slugify");
+
+// Require the geocoder package
 const geocoder = require("../utils/geocoder");
 
+// Define the bootcamp schema
 const BootcampSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -124,4 +130,5 @@ BootcampSchema.pre("save", async function(next) {
     next()
 })
 
+// Export the schema
 module.exports = mongoose.model("Bootcamp", BootcampSchema);
